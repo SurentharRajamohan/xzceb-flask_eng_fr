@@ -24,8 +24,7 @@ def english_to_french(english_text):
         french_text = "Null Input"
     else:
         convert = language_translator.translate(text=english_text, model_id='en-fr').get_result()
-        french_text = convert.get("translations")[0].get("translate")
-        #french_text = convert["translations"][0]["translation"]
+        french_text = convert["translations"][0]["translation"]
 
     return french_text
 
@@ -35,6 +34,5 @@ def french_to_english(french_text):
         english_text = "Null Input"
     else:
         convert = language_translator.translate(text=french_text, model_id='fr-en').get_result()
-        english_text = convert.get("translations")[0].get("translate")
-        #english_text = convert["translations"][0]["translation"]
+        english_text = convert["translations"][0]["translation"]
     return english_text
